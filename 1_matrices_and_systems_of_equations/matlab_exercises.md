@@ -105,6 +105,13 @@ Compute B^k, for k = 2, 3, 4, 5. Is your conjecture from part (d) still valid fo
 8. The following table describes a seven-stage model for the life cycle of the loggerhead turtle.  
 
 **Table 1 Seven-Stage Model for Loggerhead Turtle Demographics**  
+
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
+
+
 Stage Number | Description (age in years) | Annual Survivorship | Eggs Laid per Year  
 ---------- | --------- | --------- | ---------  
 1 | Eggs, hatchlings (<1) | 0.6747 | 0  
