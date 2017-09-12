@@ -3,10 +3,10 @@ The following exercises are to be solved computationally using the software pack
 MATLAB has a help facility that explains all its operations and commands. For example, to obtain information on the MATLAB command rand, you need only type: help rand. The commands used for the MATLAB exercises for this chapter are inv, floor, rand, tic, toc, rref, abs, max, round, sum, eye, triu, ones, zeros, and magic. The operations introduced are +, -, * , ' , /. The + and - represent the usual addition and subtraction operations for both scalars and matrices. The * corresponds to multiplication of either scalars, or matrices. For matrices whose entries are all real numbers and ' operation corresponds to the transpose operation. If A is a nonsingular n x n matrix and B is any n x r matrix, the operation A/B is equivalent to computing A^-1*B.  
 
 1. Use MATLAB to generate random 4 x 4 matrices A and B. For each of the following compute A1, A2, A3, A4 as indicated and determine which of the matrices are equal. You can use MATLAB to test whether two matrices are equal by computing their difference.  
-(a) A1 = A * B, A2 = B * A, A3 = (A' * B')', A4 = (B' * A')'  
-(b) A1 = A' * B', A2 = (A * B)', A3 = B' * A', A4 = (B * A)'  
-(c) A1 = inv(A * B), A2 = inv(A) * inv(B), A3 = inv(B * A), A4 = inv(B) * inv(A)  
-(d) A1 = inv((A * B)'), A2 = inv(A' * B'), A3 = inv(A') * inv(B'), A4 = (inv(A) * inv(B))'  
+  (a) A1 = A * B, A2 = B * A, A3 = (A' * B')', A4 = (B' * A')'  
+  (b) A1 = A' * B', A2 = (A * B)', A3 = B' * A', A4 = (B * A)'  
+  (c) A1 = inv(A * B), A2 = inv(A) * inv(B), A3 = inv(B * A), A4 = inv(B) * inv(A)  
+  (d) A1 = inv((A * B)'), A2 = inv(A' * B'), A3 = inv(A') * inv(B'), A4 = (inv(A) * inv(B))'  
 
 2. Set n = 200 and generate an n x n matrix and two vectors in R^n, both having integer entries, by setting  
 ```
@@ -22,7 +22,7 @@ Which method is faster?
 To compare the accuracy of the two methods we can measure how close the computed solutions x and y are to the exact solution z. Do this using the commands  
 ```
 max(abs(x - z))
-max(abs(y -z))
+max(abs(y - z))
 ```
 Which method produces the most accurate solution?  
 (b) Repeat part (a) using n = 500 and n = 1000.  
@@ -105,7 +105,7 @@ Compute B^k, for k = 2, 3, 4, 5. Is your conjecture from part (d) still valid fo
 8. The following table describes a seven-stage model for the life cycle of the loggerhead turtle.  
 
 **Table 1 Seven-Stage Model for Loggerhead Turtle Demographics**  
-  
+
 Stage Number | Description (age in years) | Annual Survivorship | Eggs Laid per Year  
 ---------- | --------- | --------- | ---------  
 1 | Eggs, hatchlings (<1) | 0.6747 | 0  
