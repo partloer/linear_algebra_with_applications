@@ -4,9 +4,9 @@ MATLAB has a help facility that explains all its operations and commands. For ex
 
 1. Use MATLAB to generate random 4 x 4 matrices A and B. For each of the following compute A1, A2, A3, A4 as indicated and determine which of the matrices are equal. You can use MATLAB to test whether two matrices are equal by computing their difference.  
   1. (a) A1 = A * B, A2 = B * A, A3 = (A' * B')', A4 = (B' * A')'  
-  2. (b) A1 = A' * B', A2 = (A * B)', A3 = B' * A', A4 = (B * A)'  
-  3. (c) A1 = inv(A * B), A2 = inv(A) * inv(B), A3 = inv(B * A), A4 = inv(B) * inv(A)  
-  4. (d) A1 = inv((A * B)'), A2 = inv(A' * B'), A3 = inv(A') * inv(B'), A4 = (inv(A) * inv(B))'  
+  1. (b) A1 = A' * B', A2 = (A * B)', A3 = B' * A', A4 = (B * A)'  
+  1. (c) A1 = inv(A * B), A2 = inv(A) * inv(B), A3 = inv(B * A), A4 = inv(B) * inv(A)  
+  1. (d) A1 = inv((A * B)'), A2 = inv(A' * B'), A3 = inv(A') * inv(B'), A4 = (inv(A) * inv(B))'  
 
 2. Set n = 200 and generate an n x n matrix and two vectors in R^n, both having integer entries, by setting  
 ```
