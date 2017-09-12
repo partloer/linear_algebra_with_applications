@@ -8,12 +8,6 @@ MATLAB has a help facility that explains all its operations and commands. For ex
   (c) A1 = inv(A * B), A2 = inv(A) * inv(B), A3 = inv(B * A), A4 = inv(B) * inv(A)  
   (d) A1 = inv((A * B)'), A2 = inv(A' * B'), A3 = inv(A') * inv(B'), A4 = (inv(A) * inv(B))'  
 
-1. Item 1
-1. Item 2
-1. Item 3
-  1. Item 3a
-  1. Item 3b  
-
 2. Set n = 200 and generate an n x n matrix and two vectors in R^n, both having integer entries, by setting  
 ```
 A = floor(10 * rand(n)); b = sum(A')'; z = ones(n, 1)  
