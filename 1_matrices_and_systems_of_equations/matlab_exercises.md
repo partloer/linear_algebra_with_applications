@@ -1,6 +1,6 @@
 # MATLAB EXERCISES #
 The following exercises are to be solved computationally using the software package MATLAB, which  is described in the appendix of this book. The exercises also contain questions that should be answered relating to the underlying mathematical principles illustrated in the computations. Save a record of your session in a file. After editing and printing out the file, the answers to the questions can then be filled in directly on the print out.  
-MATLAB has a help facility that explains all its operations and commands. For example, to obtain information on the MATLAB command rand, you need only type: help rand. The commands used for the MATLAB exercises for this chapter are inv, floor, rand, tic, toc, rref, abs, max, round, sum, eye, triu, ones, zeros, and magic. The operations introduced are +, -, * , ' , /. The + and - represent the usual addition and subtraction operations for both scalars and matrices. The * corresponds to multiplication of either scalars, or matrices. For matrices whose entries are all real numbers and ' operation corresponds to the transpose operation. If A is a nonsingular n x n matrix and B is any n x r matrix, the operation A/B is equivalent to computing A^-1*B.  
+MATLAB has a help facility that explains all its operations and commands. For example, to obtain information on the MATLAB command rand, you need only type: help rand. The commands used for the MATLAB exercises for this chapter are inv, floor, rand, tic, toc, rref, abs, max, round, sum, eye, triu, ones, zeros, and magic. The operations introduced are +, -, \*\, \'\, /. The + and - represent the usual addition and subtraction operations for both scalars and matrices. The * corresponds to multiplication of either scalars, or matrices. For matrices whose entries are all real numbers and ' operation corresponds to the transpose operation. If A is a nonsingular n x n matrix and B is any n x r matrix, the operation A/B is equivalent to computing A^-1^B.  
 
 1. Use MATLAB to generate random 4 x 4 matrices A and B. For each of the following compute A1, A2, A3, A4 as indicated and determine which of the matrices are equal. You can use MATLAB to test whether two matrices are equal by computing their difference.  
   (a) A1 = A * B, A2 = B * A, A3 = (A' * B')', A4 = (B' * A')'  
@@ -13,13 +13,13 @@ MATLAB has a help facility that explains all its operations and commands. For ex
 A = floor(10 * rand(n)); b = sum(A')'; z = ones(n, 1)  
 ```
 (Since the matrix and vectors are large, we use semicolons to suppress the printout.)  
-  (a) The exact solution to the system Ax = b should be the vector z. Why? Explain. One could compute the solution in MATLAB using the \*backslash\* operation or by computing A^-1 and then multiply A^-1 times b. Let us compare these two computational methods for both speed and accuracy. We will use MATLAB's tic and toc commands to measure the elapsed time for each computation. Do this using the following commands:  
+  (a) The exact solution to the system Ax = b should be the vector z. Why? Explain. One could compute the solution in MATLAB using the * operation or by computing A^-1 and then multiply A^-1 times b. Let us compare these two computational methods for both speed and accuracy. We will use MATLAB's tic and toc commands to measure the elapsed time for each computation. Do this using the following commands:  
 ```
 tic, x = A/b; toc  
 tic, y = inv(A) * b; toc  
 ```
 Which method is faster?  
-To compare the accuracy of the two methods we can measure how close the computed solutions x and y are to the exact solution z. Do this using the commands  
+To compare the accuracy of the two methods we can measure how close the computed solutions x and y are to the exact solution z. Do this using the commands:  
 ```
 max(abs(x - z))
 max(abs(y - z))
@@ -32,15 +32,16 @@ Which method produces the most accurate solution?
 B = A', A(:,6) = -sum(B(1:5,:))'
 ```
   (a) Set x = ones(6, 1) and use MATLAB to computer Ax. Why do we know that A must be singular? Explain. Check that A is singular by computing its reduced row echelon form.  
-  (b)
-Set  
-B = x * [1:6]  
-The product AB should equal the zero matrix. Why explain. Verify that this is so by computing AB using the MATLAB operation * .  
+  (b) Set
+```  
+B = x * [1:6]
+```  
+The product AB should equal the zero matrix. Why explain. Verify that this is so by computing AB using the MATLAB operation \*\.  
   (c) Set
 ```
 C = floor(10 * rand(6)) and D = B + C  
 ```
-Although C not equal D, the products AC and AD should be equal. Why? Explain. Compute A * C and A * D and verify that they are indeed equal.  
+Although C != D, the products AC and AD should be equal. Why? Explain. Compute A * C and A * D and verify that they are indeed equal.  
 
 4. Construct a matrix as follows. Set  
 ```
@@ -56,7 +57,7 @@ Now change B slightly by setting B(10, 1) = -1/256. Use MATLAB to compute the pr
 ```
 A = floor(10 * rand(6))  
 ```
-and generate a vector by setting  
+and generate a vector b by setting  
 ```
 b = floor(20 * rand(6, 1)) - 10  
 ```
