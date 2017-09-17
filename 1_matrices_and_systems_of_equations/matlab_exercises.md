@@ -8,12 +8,12 @@ MATLAB has a help facility that explains all its operations and commands. For ex
   (c) A1 = inv(A * B), A2 = inv(A) * inv(B), A3 = inv(B * A), A4 = inv(B) * inv(A)  
   (d) A1 = inv((A * B)'), A2 = inv(A' * B'), A3 = inv(A') * inv(B'), A4 = (inv(A) * inv(B))'  
 
-2. Set n = 200 and generate an n x n matrix and two vectors in R^n, both having integer entries, by setting  
+2. Set n = 200 and generate an n x n matrix and two vectors in R<sup>n</sup>, both having integer entries, by setting  
 ```
 A = floor(10 * rand(n)); b = sum(A')'; z = ones(n, 1)  
 ```
 (Since the matrix and vectors are large, we use semicolons to suppress the printout.)  
-  (a) The exact solution to the system Ax = b should be the vector z. Why? Explain. One could compute the solution in MATLAB using the * operation or by computing A^-1 and then multiply A^-1 times b. Let us compare these two computational methods for both speed and accuracy. We will use MATLAB's tic and toc commands to measure the elapsed time for each computation. Do this using the following commands:  
+  (a) The exact solution to the system Ax = b should be the vector z. Why? Explain. One could compute the solution in MATLAB using the * operation or by computing A<sup>-1</sup> and then multiply A<sup>-1</sup> times b. Let us compare these two computational methods for both speed and accuracy. We will use MATLAB's tic and toc commands to measure the elapsed time for each computation. Do this using the following commands:  
 ```
 tic, x = A/b; toc  
 tic, y = inv(A) * b; toc  
@@ -61,7 +61,7 @@ and generate a vector b by setting
 ```
 b = floor(20 * rand(6, 1)) - 10  
 ```
-  (a) Since A was generated randomly, we would expect to be nonsingular. The system Ax = b should have a unique solution. Find the solution using the "\" operation. Use MATLAB to compute the reduced row echelon form U of [A b]. How does the last column of U compare with the solution x? In exact arithmetic they should be the same. Why? Explain. To compare the two, compute the difference U(:, 7) - x or examine both using format long.  
+  (a) Since A was generated randomly, we would expect to be nonsingular. The system Ax = b should have a unique solution. Find the solution using the "\\" operation. Use MATLAB to compute the reduced row echelon form U of [A b]. How does the last column of U compare with the solution x? In exact arithmetic they should be the same. Why? Explain. To compare the two, compute the difference U(:, 7) - x or examine both using format long.  
 
   (b) Let us now change A so as to make it singular. Set  
 ```
@@ -75,7 +75,7 @@ y = floor(20 * rand(6, 1)) - 10 and c = A * y
 ```
 Why do we know the system Ax = c must be consistent? Explain. Compute the reduced row echelong form U of [A c]. How many solutions does the system Ax = c have? Explain.  
 
-  (d) The free variable determined by the echelon form should be x3. By examining the system corresponding to the matrix U, you should be able to determine the solution corresponding to x3 = 0. Enter this solution in MATLAB as a column vector w. To check that Aw = c, compute the residual vector c - Aw.  
+  (d) The free variable determined by the echelon form should be x<sub>3</sub>. By examining the system corresponding to the matrix U, you should be able to determine the solution corresponding to x<sub>3</sub> = 0. Enter this solution in MATLAB as a column vector w. To check that Aw = c, compute the residual vector c - Aw.  
 
   (e) Set U(:, 7) = zeros(6, 1). The matrix U should now correspond to the reduced row echelon form of (A | 0). Use U to determine  the solution to the homogeneous system when the free variable x3 = 1 (do this by hand) and enter the result as a vector z. Check your answer by computing A * z.  
 
@@ -87,21 +87,21 @@ Why do we know the system Ax = c must be consistent? Explain. Compute the reduce
 
   (a) Determine the adjacency matrix A for the graph and enter it in MATLAB.  
 
-  (b) Compute A^2 and determine the number of walks of length 2 from (i) V1 to V7, (ii) V4 to V8 (iii) V5 to V6, (iv) V8 to V3.  
+  (b) Compute A<sup>2</sup> and determine the number of walks of length 2 from (i) V<sub>1</sub> to V<sub>7</sub>, (ii) V<sub>4</sub> to V<sub>8</sub> (iii) V<sub>5</sub> to V<sub>6</sub>, (iv) V<sub>8</sub> to V<sub>3</sub>.  
 
-  (c) Compute A^4, A^6, A^8 and answer the questions to part (b) for walks of length 4, 6, and 8. Make a conjecture as to when there will be no walks of even length from vertex Vi to vertex Vj.  
+  (c) Compute A<sup>4</sup>, A<sup>6</sup>, A<sup>8</sup> and answer the questions to part (b) for walks of length 4, 6, and 8. Make a conjecture as to when there will be no walks of even length from vertex V<sub>i</sub> to vertex V<sub>j</sub>.  
 
-  (d) Compute A^3, A^5, A^7 and answer the questions from part (b) for walks of length 3, 5, and 7. Does your conjecture from part (c) hold for walk of odd length? Explain. Make a conjecture as to whether there are any walks of length k from Vi to Vj based on whether i + j + k is odd or even.  
+  (d) Compute A<sup>3</sup>, A<sup>5</sup>, A<sup>7</sup> and answer the questions from part (b) for walks of length 3, 5, and 7. Does your conjecture from part (c) hold for walk of odd length? Explain. Make a conjecture as to whether there are any walks of length k from V<sub>i</sub> to V<sub>j</sub> based on whether i + j + k is odd or even.  
 
   (e) If we add the edges {V3, V6}, {V5, V8} to the graph, the adjacency matrix B for the new graph can be generated by setting B = A and then setting  
 ```
 B(3, 6) = 1, B(6, 3) = 1, B(5, 8) = 1, B(8, 5) = 1  
 ```
-Compute B^k, for k = 2, 3, 4, 5. Is your conjecture from part (d) still valid for the new graph?  
+Compute B<sup>k</sup>, for k = 2, 3, 4, 5. Is your conjecture from part (d) still valid for the new graph?  
 
-  (f) Add the edge {V6, V8} to the figure and construct the adjacency matrix C for the resulting graph. Compute powers of C to determine whether your conjecture from part (d) will still hold for this new graph.  
+  (f) Add the edge {V<sub>6</sub>, V<sup>8</sub>} to the figure and construct the adjacency matrix C for the resulting graph. Compute powers of C to determine whether your conjecture from part (d) will still hold for this new graph.  
 
-7. In Application 2 of section 3, the number of married and single women after 1 and 2 years were determined by computing the products AX and A^2X for the given matrices A and X. Use format long and enter these matrices in MATLAB. Compute A^k and A^kX for k = 5, 10, 15, 20. What is happening to A^k as k gets large? What is the long-run distribution of married and single women in the town?  
+7. In Application 2 of section 3, the number of married and single women after 1 and 2 years were determined by computing the products AX and A<sup>2</sup>X for the given matrices A and X. Use format long and enter these matrices in MATLAB. Compute A<sup>k</sup> and A<sup>k</sup>X for k = 5, 10, 15, 20. What is happening to A<sup>k</sup> as k gets large? What is the long-run distribution of married and single women in the town?  
 
 8. The following table describes a seven-stage model for the life cycle of the loggerhead turtle.  
 
@@ -121,11 +121,11 @@ The corresponding Leslie matrix is given by
 
 L = [[0, 0, 0, 0, 127, 4, 80], [0.6747, 0.7370, 0, 0, 0, 0, 0], [0, 0.0486, 0.6610, 0, 0, 0, 0], [0, 0, 0.0147, 0.6907, 0, 0, 0], [0, 0, 0, 0.0518, 0, 0, 0], [0, 0, 0, 0, 0.8091, 0, 0], [0, 0, 0, 0, 0, 0.8091, 0.8089] ]  
 
-Suppose that the number of turtles in each stage of the initial turtle population is described by the vector x0 = (200, 000 130, 000 100, 000 70, 000 500 400 1100)^T  
+Suppose that the number of turtles in each stage of the initial turtle population is described by the vector x0 = (200, 000 130, 000 100, 000 70, 000 500 400 1100)<sup>T</sup>  
 
   (a) Enter L in MATLAB and then set x0 = (200000, 130000, 100000, 70000, 500, 400, 1100)'  
 
-Use the command x50 = round(L^50*x0)  
+Use the command x50 = round(L<sup>50</sup>\*\x0)  
 
 to compute x50. Compute also the values of x100, x150, x200, x250, and x300.  
 
@@ -137,24 +137,24 @@ to compute x50. Compute also the values of x100, x150, x200, x250, and x300.
 ```
 b = [ 8 -8 -8 8 8 -8 -8 8]';  
 ```
-and consider the system Ax = b. This system should be consistent. Verify that it is by computing U = rref([A b]). We should be able to find a solution for any choice of the five free variables. Indeed, set x2 = floor(10 * rand(5, 1)). If x2 represents the last five coordinates of a solution to the system, then we should be able to determine x1 = (x1, x2, x3)^T in terms of x2. To do this, set U = rref([A b]). The nonzero rows of U correspond to a linear system with block form  
+and consider the system Ax = b. This system should be consistent. Verify that it is by computing U = rref([A b]). We should be able to find a solution for any choice of the five free variables. Indeed, set x<sub>2</sub> = floor(10 * rand(5, 1)). If x<sub>2</sub> represents the last five coordinates of a solution to the system, then we should be able to determine x<sub>1</sub> = (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>)<sup>T</sup> in terms of x<sub>2</sub>. To do this, set U = rref([A b]). The nonzero rows of U correspond to a linear system with block form  
 
 (I V)(x1)
      (x2) = c
 
 To solve equation, set V = U(1: 3, 4: 8), c = U(1 : 3, 9)  
 
-and use MATLAB to compute x1 in terms of x2, c, and V. Set x  [x1; x2] and verify that x is a solution to the system.  
+and use MATLAB to compute x<sub>1</sub> in terms of x<sub>2</sub>, c, and V. Set x  [x<sub>1</sub>; x<sub>2</sub>] and verify that x is a solution to the system.  
 
 10. Set  
 ```
 B = [-1, -1; 1, 1] and A = [zeros(2), eye(2); eye(2), B]  
 ```
-and verify that B^2 = O.  
+and verify that B<sup>2</sup> = O.  
 
-  (a) Use MATLAB to compute A^2, A^4, A^6, and A^8. To make a conjecture as to what the block form of A^2k will be in terms of the submatrices I, O, and B. Use mathematical induction to prove that your conjecture is true for any positive integer k.  
+  (a) Use MATLAB to compute A<sup>2</sup>, A<sup>4</sup>, A<sup>6</sup>, and A<sup>8</sup>. To make a conjecture as to what the block form of A<sup>2k</sup> will be in terms of the submatrices I, O, and B. Use mathematical induction to prove that your conjecture is true for any positive integer k.  
 
-  (b) Use MATLAB to compute A^3, A^5, A^7, and A^9. Make a conjecture as to what the block form of A^(2k-1) will be in terms of the submatrices I, O, and B. Prove your conjecture.  
+  (b) Use MATLAB to compute A<sup>3</sup>, A<sup>5</sup>, A<sup>7</sup>, and A<sup>9</sup>. Make a conjecture as to what the block form of A<sup>2k-1</sup> will be in terms of the submatrices I, O, and B. Prove your conjecture.  
 
 11. (a) The MATLAB commands  
 ```
@@ -166,7 +166,7 @@ B11 = B(1:3, 1:3), B12 = B(1:3, 4:6)
 ```
 and define B21 and B22 in a similar manner using rows 4 through 6 of B.  
 
-  (b) Set C = inv(B11). It should be the case that C^T = C and B21^T = B12. Why? Explain. Use the MATLAB operation ' to compute the transpose and verify these claims. Next, set  
+  (b) Set C = inv(B11). It should be the case that C<sup>T</sup> = C and B21<sup>T</sup> = B12. Why? Explain. Use the MATLAB operation ' to compute the transpose and verify these claims. Next, set  
 ```
 E = B21 * C and F = B22 - B21 * C * B21'  
 ```
@@ -174,4 +174,4 @@ and use the MATLAB functions eye and zeros to construction
 ```
 L = (I O, E I), D = (B11 O, O F)  
 ```
-Compute H = L * D * L' and compare it to B by computing H - B. Prove that if all computations had been done in exact arithmetic LDL^T would equal B exactly.  
+Compute H = L * D * L' and compare it to B by computing H - B. Prove that if all computations had been done in exact arithmetic LDL<sup>T</sup> would equal B exactly.  
