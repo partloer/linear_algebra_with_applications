@@ -1,5 +1,5 @@
 # MATLAB EXERCISES #
-The following exercises are to be solved computationally using the software package MATLAB, which  is described in the appendix of this book. The exercises also contain questions that should be answered relating to the underlying mathematical principles illustrated in the computations. Save a record of your session in a file. After editing and printing out the file, the answers to the questions can then be filled in directly on the print out.  
+The following exercises are to be solved computationally using the software package MATLAB, which is described in the appendix of this book. The exercises also contain questions that should be answered relating to the underlying mathematical principles illustrated in the computations. Save a record of your session in a file. After editing and printing out the file, the answers to the questions can then be filled in directly on the print out.  
 MATLAB has a help facility that explains all its operations and commands. For example, to obtain information on the MATLAB command rand, you need only type: help rand. The commands used for the MATLAB exercises for this chapter are inv, floor, rand, tic, toc, rref, abs, max, round, sum, eye, triu, ones, zeros, and magic. The operations introduced are +, -, \*\, \'\, /. The + and - represent the usual addition and subtraction operations for both scalars and matrices. The * corresponds to multiplication of either scalars, or matrices. For matrices whose entries are all real numbers and ' operation corresponds to the transpose operation. If A is a nonsingular n x n matrix and B is any n x r matrix, the operation A/B is equivalent to computing A<sup>-1</sup>B.  
 
 1. Use MATLAB to generate random 4 x 4 matrices A and B. For each of the following compute A1, A2, A3, A4 as indicated and determine which of the matrices are equal. You can use MATLAB to test whether two matrices are equal by computing their difference.  
@@ -13,18 +13,18 @@ MATLAB has a help facility that explains all its operations and commands. For ex
 A = floor(10 * rand(n)); b = sum(A')'; z = ones(n, 1)  
 ```
 (Since the matrix and vectors are large, we use semicolons to suppress the printout.)  
-  (a) The exact solution to the system Ax = b should be the vector z. Why? Explain. One could compute the solution in MATLAB using the * operation or by computing A<sup>-1</sup> and then multiply A<sup>-1</sup> times b. Let us compare these two computational methods for both speed and accuracy. We will use MATLAB's tic and toc commands to measure the elapsed time for each computation. Do this using the following commands:  
+  (a) The exact solution to the system Ax = b should be the vector z. Why? Explain. One could compute the solution in MATLAB using the "/" operation or by computing A<sup>-1</sup> and then multiply A<sup>-1</sup> times b. Let us compare these two computational methods for both speed and accuracy. We will use MATLAB's tic and toc commands to measure the elapsed time for each computation. Do this using the following commands:  
 ```
-tic, x = A/b; toc  
-tic, y = inv(A) * b; toc  
+    tic, x = A/b; toc  
+    tic, y = inv(A) * b; toc  
 ```
-Which method is faster?  
-To compare the accuracy of the two methods we can measure how close the computed solutions x and y are to the exact solution z. Do this using the commands:  
+  Which method is faster?  
+  To compare the accuracy of the two methods we can measure how close the computed solutions x and y are to the exact solution z. Do this using the commands:  
 ```
-max(abs(x - z))
-max(abs(y - z))
+    max(abs(x - z))
+    max(abs(y - z))
 ```
-Which method produces the most accurate solution?  
+  Which method produces the most accurate solution?  
   (b) Repeat part (a) using n = 500 and n = 1000.  
 
 3. Set A = floor(10 * rand(6)). By construction, the matrix A will have integer entries. Let us change the sixth column of A so as to make the matrix singular. Set  
@@ -83,7 +83,7 @@ Why do we know the system Ax = c must be consistent? Explain. Compute the reduce
 
 6. Consider the graph  
 
-![Figure 1](https://www.github.com/partloer/linear_algebra_with_applications/1_matrices_and_systems_of_equations/figure1.jpg)
+![Figure 1](https://github.com/partloer/linear_algebra_with_applications/1_matrices_and_systems_of_equations/figure1.jpg)
 
   (a) Determine the adjacency matrix A for the graph and enter it in MATLAB.  
 
