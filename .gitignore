@@ -5,6 +5,7 @@
 
 # Windows default autosave extension
 *.asv
+*.code-workspace
 
 # OSX / *nix default autosave extension
 *.m~
